@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./service.css";
 import serviceImage from "./service_1.png";
 import { FaUsers, FaProjectDiagram, FaClock } from "react-icons/fa";
