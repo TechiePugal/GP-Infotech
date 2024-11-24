@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Rocket, Brain, Code2, Settings, Users, Briefcase, MapPin, Clock, Phone, Mail } from 'lucide-react';
 import emailjs from 'emailjs-com';
 import './Home.css';
