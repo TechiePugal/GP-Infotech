@@ -1,0 +1,396 @@
+/* Container for the entire service section */
+.service-container {
+    padding: 20px;
+    background-image: url(ser-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+}
+
+/* Intro Section */
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.text-content {
+    flex: 1;
+    padding: 0 40px;
+    text-align: left;
+}
+
+.intro-heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+.intro-description {
+    font-size: 1.2rem;
+    color: #000;
+    animation: fadeInLeft 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+.service-bt {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    margin: 5px;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.service-bt span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.service-bt span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.service-bt:hover span {
+    padding-right: 25px;
+}
+
+.service-bt:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* Image Section */
+.image-content {
+    flex: 1;
+    text-align: right;
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+
+.intro-image {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+    padding-right: 50px;
+    animation: fadeInRight 1s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Service Section */
+.service-heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-in-out forwards;
+}
+
+/* Grid layout for service items */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 70px;
+    justify-items: center;
+    padding: 0 20px;
+}
+
+/* Service Item */
+.service-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-out forwards;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-title {
+    font-size: 1.8rem;
+    color: #d6b50d;
+    margin-bottom: 15px;
+}
+
+.service-description {
+    font-size: 1rem;
+    color: #000000;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Stats Section */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2164e0;
+    padding: 10px 30px;
+    margin-bottom: 25px;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+    color: #d6b50d;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.stat-title {
+    font-size: 1rem;
+    color: #e1cf05;
+}
+
+/* Technologies Section */
+.technologies-used {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.technologies-used h3 {
+    font-size: 2rem;
+    color: #2164e0;
+    margin-bottom: 20px;
+}
+
+/* Grid for Technology Items */
+.technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual Technology Box */
+.tech-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .technologies-grid {
+        grid-template-columns: 1fr 1fr; /* Stack items on smaller screens */
+    }
+
+    .process-grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-content {
+        padding-right: 0;
+    }
+
+    .image-content {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* Process Grid */
+.process-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+/* Process Step Box */
+.process-step-box {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/* Title and Content Styling */
+.process-step-box h4 {
+    font-size: 1.3rem;
+    color: #2164e0;
+    margin-bottom: 10px;
+}
+
+.process-step-box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* General Section Styles */
+section {
+    margin-bottom: 40px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect for Sections */
+section:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Technologies We've Used Section */
+.technologies-used {
+    margin-bottom: 40px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tech-item{
+    background-color: #d6b50d;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.tech-item:hover{
+    background-color: #710dd6;
+    color: #FFFFFF;
+}
+
+
+
+/* Service Item (Inside Our Premium IT Services) */
+
+.service-item:hover {
+    transform: scale(1.05); /* Slight scale effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #367c00; /* Stronger shadow on hover */
+    transform: translateX(5px);
+}
+
+
+
+
+
+
+
+.process-step-box:hover {
+    transform: scale(1.05); /* Slight scale effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #24e2c8; /* Stronger shadow on hover */
+}
+
+/* Animation Keyframes for fadeInUp */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,182 @@
+/* Navbar Styling */
+.navbar {
+    position: sticky; /* Make navbar sticky */
+  top: 0; /* Stick to the top of the screen */
+    background-color: #ffffff; /* Default navbar background */
+    color: #0a0606; /* Black text */
+    height: 80px;
+    padding-top: 0%;
+    opacity: 0; /* Start invisible for fade-in animation */
+    animation: fadeIn 1.5s ease-in-out forwards;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+/* Font Imports (must be at the top of the file) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
+
+/* Navbar Styling */
+.navbar {
+  background-color: #ffffff; /* Default navbar background */
+  color: #0a0606; /* Black text */
+  padding: 10px 20px;
+  opacity: 0; /* Start invisible for fade-in animation */
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 50px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+  display: inline-block;
+}
+
+.navbar-company-name {
+  font-size: 1.9rem; /* Adjust the font size as needed */
+  font-weight: bold;
+  margin-left: 55px; /* Add spacing between the logo and text */
+  margin-right: auto; /* Push navigation links to the right */
+  display: flex;
+  align-items: center; /* Center align the text vertically */
+}
+
+/* Styling for 'Guna' - Green, Font: Poppins (bold) */
+.guna-text {
+  font-family: 'Poppins', sans-serif;
+  color: #10b981; /* Green color */
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+/* Styling for 'Parimalam' - Red, Font: Roboto (bold) */
+.parimalam-text {
+  font-family: 'Roboto', sans-serif;
+  color: #dc2626; /* Red color */
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+/* Styling for 'Infotech' - Blue, Font: Poppins (bold) */
+.infotech-text {
+  font-family: 'Poppins', sans-serif;
+  color: #3b82f6; /* Blue color */
+  font-weight: 600;
+}
+
+/* Navbar Links Styling */
+.navbar-links {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-link {
+  color: #0b0404; /* Black links */
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover Effect for Specific Link */
+.navbar-link:hover {
+  background-color: #dc2626; /* Red background for hovered link */
+  color: #ffffff; /* White text on hover */
+}
+
+/* Animated underline on hover */
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #6ee7b7; /* Light green underline */
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-link:hover::after {
+  width: 100%; /* Full underline on hover */
+}
+
+  
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #10b981; /* Green */
+  }
+  .logo-image {
+    height: 80px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+    display: inline-block;
+  }
+  
+  
+  .navbar-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navbar-link {
+    color: #0b0404; /* Black links */
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative; /* For underline animation */
+    padding: 8px 15px; /* Add padding for better hover area */
+    border-radius: 5px; /* Rounded edges for hover background */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect for Specific Link */
+  .navbar-link:hover {
+    background-color: #dc2626; /* Red background for hovered link */
+    color: #ffffff; /* White text on hover */
+  }
+  
+  /* Animated underline on hover */
+  .navbar-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #6ee7b7; /* Light green underline */
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .navbar-link:hover::after {
+    width: 100%; /* Full underline on hover */
+  }
+  
+  /* Fade-in Animation for Navbar */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px); /* Slide down effect */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

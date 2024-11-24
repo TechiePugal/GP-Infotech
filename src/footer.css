@@ -1,0 +1,130 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: center; /* Vertically align items */
+    background-image: url(248.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 20px 40px;
+    color: #fcfcfc;
+    font-family: Arial, sans-serif;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Left Section */
+.footer-left {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+}
+.a{
+    color:#fcfcfc;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* Center Section */
+.footer-center {
+    flex: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.footer-center h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.footer-center p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Right Section */
+.footer-right {
+    flex: 1;
+    display: flex;
+    justify-content: space-between; /* Divide into two columns */
+    text-align: left;
+}
+
+.footer-links {
+    flex: 1;
+    padding: 0 10px;
+
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+.footer-links a {
+    color: white;
+}
+
+
+/* Horizontal line for footer separation */
+.footer-bottom-line {
+    margin: 20px 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc; /* Add a horizontal line */
+}
+
+/* Copyright Section */
+.footer-bottom {
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        flex: none; /* Remove flexible space */
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .footer-right {
+        flex-direction: column; /* Stack links vertically */
+    }
+}
